@@ -38,3 +38,11 @@
 >>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
   }
 }
+
+{
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  }
+}
