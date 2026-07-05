@@ -1179,6 +1179,7 @@
 
 // ------------------------New Code-------------------------
 
+<<<<<<< HEAD
 // import React, { useState } from 'react';
 // import { motion } from 'framer-motion';
 // import { Palette, Video, Globe, TrendingUp, Check, Star, Users, Target, BarChart3, Zap, X } from 'lucide-react';
@@ -1749,6 +1750,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Palette, Video, Globe, TrendingUp, Check, Star, Users, Target, BarChart3, Zap, X } from 'lucide-react';
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Palette, Video, Globe, TrendingUp, Check, Star, Users, Target, BarChart3, Zap } from 'lucide-react';
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
 import { Link } from 'react-router-dom';
 
 const Services = () => {
@@ -1892,6 +1898,7 @@ const Services = () => {
   ];
 
   const samplePosters = [
+<<<<<<< HEAD
     { id: 1, url: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/FreeBird-Images/Iron rich foods for anaemia.png', title: 'Brand Identity' },
     { id: 2, url: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/FreeBird-Images/WhatsApp Image 2025-09-01 at 7.36.44 PM.jpeg', title: 'Event Poster' },
     { id: 3, url: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/FreeBird-Images/Subbayya gari hotel 1.jpg', title: 'Product Launch' },
@@ -1918,6 +1925,22 @@ const Services = () => {
     size?: 'small' | 'normal';
   }) => {
     const [selectedPoster, setSelectedPoster] = useState<{ id: number; url: string; title: string } | null>(null);
+=======
+    { id: 1, url: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753355974/London_shakes_fried_chicken_eijhun.jpg', title: 'Brand Identity' },
+    { id: 2, url: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753358595/Fathers_day_poster_trudent_survo5.jpg', title: 'Event Poster' },
+    { id: 3, url: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753358595/Mutton_Keema_samosa_Janatha_Tea_point_fkjc56.jpg', title: 'Product Launch' },
+    { id: 4, url: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753355975/Dimples_creation_Dr._subhash_csejxn.jpg', title: 'Social Media' },
+    { id: 5, url: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753359029/Bhimavaram_001_gfoo0l.png', title: 'Marketing Campaign' },
+    { id: 6, url: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753360853/Free_Bird_Training_Poster_01_s07qmi.jpg', title: 'Corporate Design' },
+    { id: 7, url: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753360857/Campaign_Poster_adoyfb.jpg', title: 'Marketing Campaign' },
+    { id: 8, url: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753359027/clearance_sale_rmgoxo.png', title: 'Marketing Campaign' },
+    { id: 9, url: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753360845/SaveVid.Net_449163199_122122492328291490_3831507330999147960_n_mtmenv.jpg', title: 'Corporate Design' },
+    { id: 10, url: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753359025/1-16may_dbbrw2.png', title: 'Social Media' }
+  ];
+
+  const ScrollingPosters = ({ direction = 'left', speed = 50, posters, size = 'normal' }) => {
+    const [isPaused, setIsPaused] = React.useState(false);
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
     const posterWidth = size === 'small' ? 225 : 300;
     const posterHeight = size === 'small' ? 'h-56-25' : 'h-75';
     const gap = 16;
@@ -1925,6 +1948,7 @@ const Services = () => {
     const totalWidth = (posters.length * posterWidth) + (posters.length * gap);
 
     return (
+<<<<<<< HEAD
       <>
         <div className="w-full overflow-hidden relative">
           <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden">
@@ -1994,6 +2018,43 @@ const Services = () => {
           </motion.div>
         )}
       </>
+=======
+      <div className="w-full overflow-hidden relative">
+        <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden">
+          <motion.div
+            className="flex"
+            style={{ gap: `${gap}px`, paddingLeft: direction === 'left' ? '0px' : `${gap}px`, paddingRight: direction === 'right' ? '0px' : `${gap}px` }}
+            animate={{ x: !isPaused ? (direction === 'left' ? [0, -totalWidth] : [-totalWidth, 0]) : 0 }}
+            transition={{ duration: speed, repeat: !isPaused ? Infinity : 0, ease: 'linear' }}
+          >
+            {duplicatedPosters.map((poster, index) => (
+              <motion.div
+                key={`${poster.id}-${index}`}
+                className="flex-shrink-0 cursor-pointer group"
+                style={{ width: posterWidth }}
+                onClick={() => setIsPaused(!isPaused)}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
+              >
+                <div className={`w-full ${posterHeight} bg-gradient-to-br from-primary-500 to-primary-600 shadow-lg overflow-hidden relative rounded-xl`}>
+                  <img src={poster.url} alt={poster.title} className="w-full h-full object-cover group-hover:brightness-110 transition-all duration-300 rounded-xl" />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-end rounded-xl">
+                    <div className="p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="font-medium text-sm">{poster.title}</p>
+                    </div>
+                  </div>
+                  {isPaused && (
+                    <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-xl">
+                      <div className="text-white text-sm font-medium bg-black bg-opacity-70 px-3 py-1 rounded-full">Click to Resume</div>
+                    </div>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
     );
   };
 
@@ -2116,7 +2177,13 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
+<<<<<<< HEAD
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full mb-6">
+=======
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r
+
+ from-primary-500 to-primary-600 rounded-full mb-6">
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
                 <pageIcons.web className="h-8 w-8 text-white" />
               </div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Website Development</h2>
@@ -2221,17 +2288,22 @@ const Services = () => {
               <motion.div
                 key={index}
                 className={`bg-white rounded-2xl shadow-lg overflow-hidden relative transition-all duration-300 w-full max-w-sm ${
+<<<<<<< HEAD
                   pkg.popular
                     ? 'ring-2 ring-purple-500 transform scale-105 hover:shadow-xl'
                     : pkg.isFree
                     ? 'ring-2 ring-green-500 transform scale-105 hover:shadow-xl'
                     : 'ring-2 ring-orange-500 hover:shadow-lg'
+=======
+                  pkg.popular ? 'ring-2 ring-purple-500 transform scale-105 hover:shadow-xl' : pkg.isFree ? 'ring-2 ring-green-500 transform scale-105 hover:shadow-xl' : 'hover:shadow-lg'
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
                 }`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
+<<<<<<< HEAD
                 style={{ willChange: 'transform' }}
               >
                 {(pkg.popular || pkg.isFree || pkg.name === 'Web Development') && (
@@ -2242,6 +2314,17 @@ const Services = () => {
                   >
                     <Star className="h-4 w-4" />
                     {pkg.popular ? 'Popular' : pkg.isFree ? 'Free' : 'Web Pack'}
+=======
+              >
+                {(pkg.popular || pkg.isFree || pkg.name === 'Custom All-in-One' || pkg.name === 'Web Development') && (
+                  <div
+                    className={`absolute top-0 right-0 ${
+                      pkg.popular ? 'bg-purple-500' : pkg.isFree ? 'bg-green-500' : pkg.name === 'Custom All-in-One' ? 'bg-orange-500' : 'bg-orange-500'
+                    } text-white px-4 py-1 rounded-bl-lg flex items-center gap-1`}
+                  >
+                    <Star className="h-4 w-4" />
+                    {pkg.popular ? 'Popular' : pkg.isFree ? 'Free' : pkg.name === 'Custom All-in-One' ? 'Special' : 'Web Pack'}
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
                   </div>
                 )}
                 <div className="p-8 flex flex-col h-full">
@@ -2254,7 +2337,11 @@ const Services = () => {
                   <ul className="space-y-3 mb-8">
                     {pkg.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center space-x-3">
+<<<<<<< HEAD
                         <Check className="h-5 w-5 text-primary-500" />
+=======
+                        < Check className="h-5 w-5 text-primary-500" />
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
                         <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
@@ -2268,6 +2355,11 @@ const Services = () => {
                           ? 'bg-purple-500 text-white hover:bg-purple-600 hover:shadow-lg transform hover:scale-105'
                           : pkg.isFree
                           ? 'bg-green-500 text-white hover:bg-green-600 hover:shadow-lg transform hover:scale-105'
+<<<<<<< HEAD
+=======
+                          : pkg.name === 'Custom All-in-One' || pkg.name === 'Web Development'
+                          ? 'bg-orange-500 text-white hover:bg-orange-600 hover:shadow-lg transform hover:scale-105'
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
                           : 'bg-orange-500 text-white hover:bg-orange-600 hover:shadow-lg transform hover:scale-105'
                       }`}
                     >
@@ -2294,11 +2386,19 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div className="text-center mb-12" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Creative Portfolio</h2>
+<<<<<<< HEAD
             <p className="text-xl text-gray-600">See our design work in action - click any poster to view it in full size</p>
           </motion.div>
           <div className="space-y-8">
             <ScrollingPosters direction="left" speed={50} posters={samplePosters} size="small" />
             <ScrollingPosters direction="right" speed={60} posters={[...samplePosters].reverse()} size="small" />
+=======
+            <p className="text-xl text-gray-600">See our design work in action - click any poster to pause and explore</p>
+          </motion.div>
+          <div className="space-y-8">
+            <ScrollingPosters direction="left" speed={50} posters={samplePosters} size="small" />
+            <ScrollingPosters direction="right" speed={60} posters={samplePosters.reverse()} size="small" />
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
           </div>
         </div>
       </section>

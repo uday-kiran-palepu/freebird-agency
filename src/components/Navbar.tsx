@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React, { useState, useEffect } from 'react';
 // import { Link, useLocation } from 'react-router-dom';
 // import { motion } from 'framer-motion';
@@ -129,6 +130,8 @@
 // export default Navbar;
 
 
+=======
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -157,6 +160,10 @@ const Navbar = () => {
     { name: 'Contact', path: '/contact' },
   ];
 
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
   return (
     <motion.nav
       className={`fixed top-0 w-full z-50 ${
@@ -167,6 +174,7 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
         <div className="flex justify-between items-center h-14 md:h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
@@ -175,6 +183,15 @@ const Navbar = () => {
               src="https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/FreeBird-Images/bird-text.png"
               alt="Freebird Logo"
               className="h-32 md:h-40 w-auto max-w-[300px] object-contain"
+=======
+        <div className="flex justify-between items-center h-16 md:h-20">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2">
+            <img
+              src="https://res.cloudinary.com/dbgbuzyw8/image/upload/v1755178854/fs_ycvaub.png"
+              alt="Freebird Logo"
+              className="h-12 w-auto object-contain"
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
             />
           </Link>
 
@@ -257,4 +274,8 @@ const Navbar = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Navbar;
+=======
+export default Navbar;
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b

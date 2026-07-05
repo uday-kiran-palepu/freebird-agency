@@ -379,11 +379,16 @@
 // export default Portfolio;
 
 
+<<<<<<< HEAD
 import React, { useState, useRef } from 'react';
+=======
+import React, { useState } from 'react';
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
 import { motion, AnimatePresence } from 'framer-motion';
 import { Filter, ExternalLink, Play, X } from 'lucide-react';
 
 const Portfolio = () => {
+<<<<<<< HEAD
   const pageImages = {
     heroBackground: 'https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=1920',
   };
@@ -392,12 +397,33 @@ const Portfolio = () => {
     filter: Filter,
     external: ExternalLink,
     play: Play,
+=======
+  // ========================================
+  // 🖼️ IMAGES & ICONS - EASY TO UPDATE
+  // ========================================
+  const pageImages = {
+    heroBackground: 'https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    // 📝 TO UPDATE: Replace URLs above with your images
+  };
+
+  const pageIcons = {
+    // 🔄 TO CHANGE ICONS: Replace with any Lucide React icon name
+    filter: Filter,
+    external: ExternalLink,
+    play: Play,
+    // 📝 EXAMPLE: Add more icons like: newIcon: IconName,
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
   };
 
   const [activeFilter, setActiveFilter] = useState('all');
   const [selectedImage, setSelectedImage] = useState(null);
+<<<<<<< HEAD
   const portfolioRef = useRef(null);
 
+=======
+
+  // Added 'Social Media Ads' to the filters array
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
   const filters = [
     { id: 'all', name: 'All Work' },
     { id: 'posters', name: 'Posters' },
@@ -412,26 +438,44 @@ const Portfolio = () => {
       id: 1,
       title: 'Corporate Business Poster',
       category: 'posters',
+<<<<<<< HEAD
       image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/FreeBird-Images/Abhaya homeo clinic 30mins walk.png',
+=======
+      image: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753358835/Untitled-1_2_kbyzzk.png',
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
       description: 'Professional poster for Real estate business',
       type: 'image'
     },
     {
       id: 2,
       title: 'FreeBird Agency',
+<<<<<<< HEAD
       category: 'social',
       image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/FreeBird-Images/WhatsApp Image 2025-09-01 at 7.36.45 PM (15).jpeg',
+=======
+      category: 'social', // Updated category
+      image: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753360850/Free_Bird_poster_c35cce.jpg',
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
       description: 'Professional poster for Brand Marketing',
       type: 'image'
     },
     {
       id: 3,
+<<<<<<< HEAD
       title: 'Q-Path Diagnostics',
       category: 'websites',
       image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Abg-services%20-Images/doctor-with-patient-s-x-ray-film%20(1).jpg',
       description: 'At home health services with Q-Path',
       type: 'link',
       liveUrl: 'https://xrayservicesathome.com/'
+=======
+      title: 'Product Launch Video',
+      category: 'videos',
+      image: 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=600',
+      description: 'Dynamic product showcase with motion graphics',
+      type: 'video',
+      liveUrl: 'https://www.youtube.com/shorts/EXAMPLE' // Example YouTube URL
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
     },
     {
       id: 4,
@@ -455,7 +499,11 @@ const Portfolio = () => {
       id: 6,
       title: 'FreeBird Agency',
       category: 'logos',
+<<<<<<< HEAD
       image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/FreeBird-Images/bird.png',
+=======
+      image: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1755178598/Free_bird_logo_png_j2fnef.png',
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
       description: 'Elegant branding for Digital Marketing Agency',
       type: 'image'
     },
@@ -463,6 +511,7 @@ const Portfolio = () => {
       id: 7,
       title: 'Portfolio Website',
       category: 'websites',
+<<<<<<< HEAD
       image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/FreeBird-Images/Udayantra_Social%20Media%20Posts.png',
       description: 'Creative portfolio site for Digital Marketers',
       type: 'link',
@@ -476,20 +525,45 @@ const Portfolio = () => {
       description: 'Creative landing page for launching a new product',
       type: 'link',
       liveUrl: 'https://shaktikit.com'
+=======
+      image: 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=600',
+      description: 'Creative portfolio site for Digital Marketers',
+      type: 'link',
+      liveUrl: 'https://udayantra.netlify.app/'
+    },
+    {
+      id: 8,
+      title: 'Social Media Campaign',
+      category: 'videos',
+      image: 'https://images.pexels.com/photos/196645/pexels-photo-196645.jpeg?auto=compress&cs=tinysrgb&w=600',
+      description: 'Viral video content for social media',
+      type: 'video',
+      liveUrl: 'https://www.instagram.com/reel/EXAMPLE/' // Example Instagram URL
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
     },
     {
       id: 9,
       title: 'HealthCare Clinic',
+<<<<<<< HEAD
       category: 'posters',
       image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/FreeBird-Images/Iron rich foods for anaemia.png',
+=======
+      category: 'logos',
+      image: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1755178431/Abhaya_homeo_clinic_logo_01_g1vrk5.png',
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
       description: 'Complete brand identity Homoeo Clinic',
       type: 'image'
     },
     {
       id: 10,
       title: 'Health Care Industry',
+<<<<<<< HEAD
       category: 'social',
       image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/FreeBird-Images/WhatsApp Image 2025-09-01 at 7.36.45 PM (38).jpeg',
+=======
+      category: 'social', // Updated category
+      image: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753355973/Sri_laasya_No_tobacco_day_poster_31.05_ygxgpi.jpg',
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
       description: 'Professional poster for Health Care Industry on No Tobacco Day',
       type: 'image'
     },
@@ -497,15 +571,24 @@ const Portfolio = () => {
       id: 11,
       title: 'Auto Mobile Industry',
       category: 'posters',
+<<<<<<< HEAD
       image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/FreeBird-Images/WhatsApp Image 2025-09-01 at 7.36.45 PM (8).jpeg',
+=======
+      image: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753358594/Bike_poster_iefpxd.jpg',
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
       description: 'Professional poster for new bike model Announcement',
       type: 'image'
     },
     {
       id: 12,
       title: 'Health Care Industry',
+<<<<<<< HEAD
       category: 'social',
       image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/FreeBird-Images/WhatsApp Image 2025-09-01 at 7.36.45 PM (18).jpeg',
+=======
+      category: 'social', // Updated category
+      image: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753358595/Trudent_15.07.2025_vq7lf3.jpg',
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
       description: 'Professional poster for Health Care Industry on Dental Issues',
       type: 'image'
     },
@@ -513,15 +596,24 @@ const Portfolio = () => {
       id: 13,
       title: 'Corporate Business Poster',
       category: 'posters',
+<<<<<<< HEAD
       image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/FreeBird-Images/WhatsApp Image 2025-09-01 at 7.36.45 PM (1).jpeg',
+=======
+      image: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753359028/Student_care_4_e5aekz.png',
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
       description: 'Professional poster for Study Abroad business',
       type: 'image'
     },
     {
       id: 14,
       title: 'FreeBird Agency',
+<<<<<<< HEAD
       category: 'social',
       image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/FreeBird-Images/WhatsApp Image 2025-09-01 at 7.36.45 PM (10).jpeg',
+=======
+      category: 'social', // Updated category
+      image: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753359024/8aug_mqqnry.png',
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
       description: 'Professional poster for Brand Marketing',
       type: 'image'
     },
@@ -529,7 +621,11 @@ const Portfolio = () => {
       id: 15,
       title: 'Corporate Business Poster',
       category: 'posters',
+<<<<<<< HEAD
       image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/FreeBird-Images/WhatsApp%20Image%202025-09-01%20at%207.36.45%20PM%20(29).jpeg',
+=======
+      image: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753360845/SaveVid.Net_448289640_122119497950291490_3216005744129623178_n_zhkcu9.jpg',
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
       description: 'Professional poster for School Admissions',
       type: 'image'
     },
@@ -540,11 +636,16 @@ const Portfolio = () => {
       image: 'https://jointefforts.in/wp-content/uploads/2024/08/doctor-helping-patient-side-view-1024x683.jpg',
       description: 'Complete patient management system with appointment scheduling',
       type: 'link',
+<<<<<<< HEAD
       liveUrl: 'https://physioheal-pro.vercel.app',
+=======
+      liveUrl: "https://physioheal-pro.vercel.app",
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
     },
     {
       id: 17,
       title: 'Social Media Campaign',
+<<<<<<< HEAD
       category: 'posters',
       image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/FreeBird-Images/WhatsApp%20Image%202025-09-01%20at%207.36.45%20PM%20(4).jpeg',
       description: 'Social Media Campaign for Brand Awareness',
@@ -558,6 +659,22 @@ const Portfolio = () => {
       description: 'At home health services with Q-Path',
       type: 'link',
       liveUrl: 'https://abgservicesathome.com/'
+=======
+      category: 'videos',
+      image: 'https://images.pexels.com/photos/196645/pexels-photo-196645.jpeg?auto=compress&cs=tinysrgb&w=600',
+      description: 'Viral video content for social media',
+      type: 'video',
+      liveUrl: '#link'
+    },
+    {
+      id: 18,
+      title: 'Social Media Campaign',
+      category: 'videos',
+      image: 'https://images.pexels.com/photos/196645/pexels-photo-196645.jpeg?auto=compress&cs=tinysrgb&w=600',
+      description: 'Viral video content for social media',
+      type: 'video',
+      liveUrl: '#link'
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
     }
   ];
 
@@ -589,10 +706,21 @@ const Portfolio = () => {
     }
   ];
 
+<<<<<<< HEAD
   const handleCardClick = (item) => {
     if ((item.type === 'link' || item.type === 'video') && item.liveUrl && item.liveUrl !== '#link') {
       window.open(item.liveUrl, '_blank', 'noopener,noreferrer');
     } else if (item.category === 'posters' || item.category === 'social') {
+=======
+  // Function to handle clicks on portfolio cards
+  const handleCardClick = (item) => {
+    // Open live URL for links and videos
+    if ((item.type === 'link' || item.type === 'video') && item.liveUrl && item.liveUrl !== '#link') {
+      window.open(item.liveUrl, '_blank', 'noopener,noreferrer');
+    } 
+    // Open image modal for posters and social media ads
+    else if (item.category === 'posters' || item.category === 'social') { // Updated category check
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
       setSelectedImage(item.image);
     }
   };
@@ -616,6 +744,7 @@ const Portfolio = () => {
       </section>
 
       {/* Filter Tabs */}
+<<<<<<< HEAD
       <section className="py-4 bg-white sticky top-20 z-40 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-center gap-2 bg-gray-100 rounded-2xl p-1 max-w-3xl mx-auto">
@@ -629,6 +758,14 @@ const Portfolio = () => {
                 }} 
                 className={`px-4 py-2 rounded-full font-medium transition-all duration-300 flex items-center space-x-2 text-sm ${activeFilter === filter.id ? 'bg-primary-500 text-white shadow-lg' : 'text-gray-600 hover:text-primary-500'}`}
               >
+=======
+      <section className="py-8 bg-white sticky top-20 z-40 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Updated filter container for better responsiveness */}
+          <div className="flex flex-wrap items-center justify-center gap-2 bg-gray-100 rounded-2xl p-2 max-w-3xl mx-auto">
+            {filters.map((filter) => (
+              <button key={filter.id} onClick={() => setActiveFilter(filter.id)} className={`px-4 py-2 rounded-full font-medium transition-all duration-300 flex items-center space-x-2 text-sm ${ activeFilter === filter.id ? 'bg-primary-500 text-white shadow-lg' : 'text-gray-600 hover:text-primary-500' }`}>
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
                 <Filter className="h-4 w-4" />
                 <span>{filter.name}</span>
               </button>
@@ -638,6 +775,7 @@ const Portfolio = () => {
       </section>
 
       {/* Portfolio Grid */}
+<<<<<<< HEAD
       <section className="py-20 bg-white pt-20" ref={portfolioRef}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -656,6 +794,29 @@ const Portfolio = () => {
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       {item.type === 'video' ? <Play className="h-12 w-12 text-white" /> : <ExternalLink className="h-12 w-12 text-white" />}
+=======
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" layout>
+            {filteredItems.map((item, index) => (
+              <motion.div
+                key={item.id}
+                className={`group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 ${
+                  ((item.type === 'link' || item.type === 'video') && item.liveUrl && item.liveUrl !== '#link') || item.category === 'posters' || item.category === 'social' ? 'cursor-pointer' : ''
+                }`}
+                onClick={() => handleCardClick(item)}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                layout
+                whileHover={{ y: -10 }}
+              >
+                <div className="relative overflow-hidden">
+                  <img src={item.image} alt={item.title} className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {item.type === 'video' ? ( <Play className="h-12 w-12 text-white" /> ) : ( <ExternalLink className="h-12 w-12 text-white" /> )}
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
                     </div>
                   </div>
                   <div className="absolute top-4 right-4">
@@ -664,9 +825,15 @@ const Portfolio = () => {
                     </span>
                   </div>
                 </div>
+<<<<<<< HEAD
                 <div className="p-2">
                   <h3 className="text-sm font-bold text-gray-900 mb-1">{item.title}</h3>
                   <p className="text-xs text-gray-600">{item.description}</p>
+=======
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
+                  <p className="text-gray-600">{item.description}</p>
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
                 </div>
               </motion.div>
             ))}
@@ -705,7 +872,11 @@ const Portfolio = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+<<<<<<< HEAD
             onClick={() => setSelectedImage(null)}
+=======
+            onClick={() => setSelectedImage(null)} // Close on background click
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
           >
             <motion.div
               className="relative"
@@ -713,7 +884,11 @@ const Portfolio = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.7, opacity: 0 }}
               transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+<<<<<<< HEAD
               onClick={(e) => e.stopPropagation()}
+=======
+              onClick={(e) => e.stopPropagation()} // Prevent closing when clicking the image itself
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
             >
               <img src={selectedImage} alt="Enlarged portfolio item" className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-2xl" />
               <button
@@ -730,4 +905,8 @@ const Portfolio = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Portfolio;
+=======
+export default Portfolio;
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b

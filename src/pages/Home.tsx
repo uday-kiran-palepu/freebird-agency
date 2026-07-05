@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React, { useState } from 'react';
 // import { motion } from 'framer-motion';
 // import { Link } from 'react-router-dom';
@@ -707,6 +708,8 @@
 // export default Home;
 
 
+=======
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -733,8 +736,12 @@ import {
   Eye,
   Briefcase,
   Code,
+<<<<<<< HEAD
   PenTool,
   X
+=======
+  PenTool
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
 } from 'lucide-react';
 
 const Home = () => {
@@ -781,6 +788,7 @@ const Home = () => {
   // ========================================
   // Add as many posters as you want by duplicating the format below
   const samplePosters = [
+<<<<<<< HEAD
     { id: 1, url: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/FreeBird-Images/Iron rich foods for anaemia.png', title: 'Brand Identity' },
     { id: 2, url: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/FreeBird-Images/WhatsApp Image 2025-09-01 at 7.36.44 PM.jpeg', title: 'Event Poster' },
     { id: 3, url: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/FreeBird-Images/Subbayya gari hotel 1.jpg', title: 'Product Launch' },
@@ -796,6 +804,26 @@ const Home = () => {
   ];
 
   // Inline ScrollingPosters Component
+=======
+    // 🔄 TO ADD MORE POSTERS: Copy any line below and change the id, url, and title
+    { id: 1, url: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753355974/London_shakes_fried_chicken_eijhun.jpg', title: 'Brand Identity' },
+    { id: 2, url: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753358595/Fathers_day_poster_trudent_survo5.jpg', title: 'Event Poster' },
+    { id: 3, url: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753358595/Mutton_Keema_samosa_Janatha_Tea_point_fkjc56.jpg', title: 'Product Launch' },
+    { id: 4, url: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753355975/Dimples_creation_Dr._subhash_csejxn.jpg', title: 'Social Media' },
+    { id: 5, url: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753359029/Bhimavaram_001_gfoo0l.png', title: 'Marketing Campaign' },
+    { id: 6, url: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753360853/Free_Bird_Training_Poster_01_s07qmi.jpg', title: 'Corporate Design' },
+    { id: 7, url: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753360857/Campaign_Poster_adoyfb.jpg', title: 'Marketing Campaign' },
+    { id: 8, url: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753359027/clearance_sale_rmgoxo.png', title: 'Marketing Campaign' },
+    { id: 9, url: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753360845/SaveVid.Net_449163199_122122492328291490_3831507330999147960_n_mtmenv.jpg', title: 'Corporate Design' },
+    { id: 10, url: 'https://res.cloudinary.com/dbgbuzyw8/image/upload/v1753359025/1-16may_dbbrw2.png', title: 'Social Media' }
+    // 📝 EXAMPLE: Add more posters like this:
+    // { id: 7, url: 'YOUR_IMAGE_URL_HERE', title: 'Your Title Here' },
+    // { id: 8, url: 'YOUR_IMAGE_URL_HERE', title: 'Your Title Here' },
+    // { id: 9, url: 'YOUR_IMAGE_URL_HERE', title: 'Your Title Here' },
+  ];
+
+  // Inline ScrollingPosters Component - Easy to customize images
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
   const ScrollingPosters = ({ 
     direction = 'left', 
     speed = 50,
@@ -807,6 +835,7 @@ const Home = () => {
     posters: Array<{ id: number; url: string; title: string }>;
     size?: 'small' | 'normal';
   }) => {
+<<<<<<< HEAD
     const [selectedPoster, setSelectedPoster] = useState<{ id: number; url: string; title: string } | null>(null);
 
     const handlePosterClick = (poster: { id: number; url: string; title: string }) => {
@@ -821,6 +850,19 @@ const Home = () => {
     const posterWidth = size === 'small' ? 225 : 300;
     const posterHeight = size === 'small' ? 'h-56-25' : 'h-75';
     const gap = 16;
+=======
+    const [isPaused, setIsPaused] = useState(false);
+    const isAnimating = !isPaused;
+
+    const handlePosterClick = () => {
+      setIsPaused(!isPaused);
+    };
+
+    // Poster dimensions based on size prop (25% larger)
+    const posterWidth = size === 'small' ? 225 : 300; // 25% increase: 180px -> 225px, 240px -> 300px
+    const posterHeight = size === 'small' ? 'h-56-25' : 'h-75';
+    const gap = 16; // 1rem gap between posters
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
 
     // Create enough duplicates to ensure seamless scrolling
     const duplicatedPosters = [...posters, ...posters, ...posters, ...posters];
@@ -840,12 +882,25 @@ const Home = () => {
               paddingRight: direction === 'right' ? '0px' : `${gap}px`
             }}
             animate={{
+<<<<<<< HEAD
               x: direction === 'left' ? [0, -totalWidth] : [-totalWidth, 0]
             }}
             transition={{
               duration: speed,
               repeat: Infinity,
               ease: 'linear'
+=======
+              x: isAnimating 
+                ? direction === 'left' 
+                  ? [0, -totalWidth]
+                  : [-totalWidth, 0]
+                : 0,
+            }}
+            transition={{
+              duration: speed,
+              repeat: isAnimating ? Infinity : 0,
+              ease: 'linear',
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
             }}
           >
             {duplicatedPosters.map((poster, index) => (
@@ -853,6 +908,7 @@ const Home = () => {
                 key={`${poster.id}-${index}`}
                 className="flex-shrink-0 cursor-pointer group"
                 style={{ width: posterWidth }}
+<<<<<<< HEAD
                 onClick={() => handlePosterClick(poster)}
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
@@ -871,11 +927,37 @@ const Home = () => {
                       <p className="font-bold text-base">{poster.title}</p>
                     </div>
                   </div>
+=======
+                onClick={handlePosterClick}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
+              >
+                <div className={`w-full ${posterHeight} bg-gradient-to-br from-primary-500 to-primary-600 shadow-lg overflow-hidden relative rounded-xl`}>
+                  <img
+                    src={poster.url}
+                    alt={poster.title}
+                    className="w-full h-full object-cover group-hover:brightness-110 transition-all duration-300 rounded-xl"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-end rounded-xl">
+                    <div className="p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="font-medium text-sm">{poster.title}</p>
+                    </div>
+                  </div>
+                  {/* Pause indicator */}
+                  {isPaused && (
+                    <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-xl">
+                      <div className="text-white text-sm font-medium bg-black bg-opacity-70 px-3 py-1 rounded-full">
+                        Click to Resume
+                      </div>
+                    </div>
+                  )}
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
                 </div>
               </motion.div>
             ))}
           </motion.div>
         </div>
+<<<<<<< HEAD
 
         {/* Popup for clicked poster */}
         {selectedPoster && (
@@ -901,6 +983,8 @@ const Home = () => {
             </div>
           </motion.div>
         )}
+=======
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
       </div>
     );
   };
@@ -1113,10 +1197,17 @@ const Home = () => {
 
       {/* Our Creative Works - Numbers */}
       <AnimatedSection>
+<<<<<<< HEAD
         <section className="py-8 bg-gradient-to-r from-primary-500 to-primary-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               className="text-center mb-8"
+=======
+        <section className="py-12 bg-gradient-to-r from-primary-500 to-primary-600">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              className="text-center mb-16"
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -1166,7 +1257,11 @@ const Home = () => {
             </div>
             
             <motion.div
+<<<<<<< HEAD
               className="text-center mt-8"
+=======
+              className="text-center mt-12"
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -1237,7 +1332,12 @@ const Home = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
+<<<<<<< HEAD
             <Link
+=======
+
+          <Link
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
               to="/portfolio"
               onClick={() => window.scrollTo(0, 0)}
               className="inline-flex items-center bg-gradient-to-r from-primary-500 to-primary-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 m-3"
@@ -1245,6 +1345,11 @@ const Home = () => {
               View All Work
               <pageIcons.arrow className="ml-2 w-5 h-5" />
             </Link>
+<<<<<<< HEAD
+=======
+
+            
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
             <Link
               to="/services"
               onClick={() => window.scrollTo(0, 0)}
@@ -1269,7 +1374,11 @@ const Home = () => {
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Creative Gallery</h2>
             <p className="text-xl text-gray-600">
+<<<<<<< HEAD
               Explore our stunning collection of creative works - click to view full size
+=======
+              Explore our stunning collection of creative works - click any poster to pause and explore
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
             </p>
           </motion.div>
 
@@ -1354,7 +1463,12 @@ const Home = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
+<<<<<<< HEAD
             <Link
+=======
+
+          <Link
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
               to="/testimonials"
               onClick={() => window.scrollTo(0, 0)}
               className="inline-flex items-center bg-gradient-to-r from-primary-500 to-primary-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 m-3"
@@ -1362,6 +1476,11 @@ const Home = () => {
               Read More Reviews
               <pageIcons.arrow className="ml-2 w-5 h-5" />
             </Link>
+<<<<<<< HEAD
+=======
+
+            
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
             <Link
               to="/team"
               onClick={() => window.scrollTo(0, 0)}

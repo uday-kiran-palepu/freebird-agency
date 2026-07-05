@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // // import React from 'react';
 // // import { motion } from 'framer-motion';
 // // import { Target, Heart, Lightbulb, Users } from 'lucide-react';
@@ -607,6 +608,8 @@
 
 // export default About;
 
+=======
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Target, Heart, Lightbulb, Users } from 'lucide-react';
@@ -680,6 +683,7 @@ const About = () => {
     }
   ];
 
+<<<<<<< HEAD
   // Floating circles for Story section
   const circles = Array.from({ length: 10 }, (_, i) => ({
     id: i,
@@ -689,6 +693,8 @@ const About = () => {
     duration: Math.random() * 8 + 8
   }));
 
+=======
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
   return (
     <div className="pt-20">
       {/* Hero Section */}
@@ -700,6 +706,7 @@ const About = () => {
             alt="About us background"
             className="w-full h-full object-cover"
           />
+<<<<<<< HEAD
           <motion.div
             className="absolute inset-0 bg-black/60"
             animate={{ opacity: [0.6, 0.7, 0.6] }}
@@ -730,11 +737,30 @@ const About = () => {
             >
               We're a creative agency that believes in the power of design, technology, and strategy to transform businesses and create lasting impact.
             </motion.p>
+=======
+          <div className="absolute inset-0 bg-black/60"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center relative z-10"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              About <span className="bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">Freebird</span>
+            </h1>
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+              We're a creative agency that believes in the power of design, technology, and strategy to transform businesses and create lasting impact.
+            </p>
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
           </motion.div>
         </div>
       </section>
 
       {/* Story Section */}
+<<<<<<< HEAD
       <section className="py-20 bg-white relative overflow-hidden">
         <div className="absolute inset-0">
           {circles.map((circle) => (
@@ -765,6 +791,14 @@ const About = () => {
             <motion.div
               initial={{ opacity: 0, x: -30, scale: 0.95 }}
               whileInView={{ opacity: 1, x: 0, scale: 1 }}
+=======
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -786,8 +820,13 @@ const About = () => {
             </motion.div>
             <motion.div
               className="relative"
+<<<<<<< HEAD
               initial={{ opacity: 0, x: 30, scale: 0.95 }}
               whileInView={{ opacity: 1, x: 0, scale: 1 }}
+=======
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -809,12 +848,19 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <motion.div
+<<<<<<< HEAD
               className="bg-gradient-to-r from-primary-50 to-primary-100 p-8 rounded-2xl shadow-lg border-l-4 border-transparent hover:border-primary-500 transition-all duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               whileHover={{ scale: 1.05, y: -5, boxShadow: '0 10px 20px rgba(59, 130, 246, 0.2)' }}
               transition={{ duration: 0.3 }}
               style={{ willChange: 'transform, box-shadow' }}
+=======
+              className="bg-white p-8 rounded-2xl shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
               viewport={{ once: true }}
             >
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h3>
@@ -825,12 +871,19 @@ const About = () => {
               </p>
             </motion.div>
             <motion.div
+<<<<<<< HEAD
               className="bg-gradient-to-r from-primary-50 to-primary-100 p-8 rounded-2xl shadow-lg border-l-4 border-transparent hover:border-primary-500 transition-all duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               whileHover={{ scale: 1.05, y: -5, boxShadow: '0 10px 20px rgba(59, 130, 246, 0.2)' }}
               transition={{ duration: 0.3, delay: 0.3 }}
               style={{ willChange: 'transform, box-shadow' }}
+=======
+              className="bg-white p-8 rounded-2xl shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
               viewport={{ once: true }}
             >
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Vision</h3>
@@ -864,6 +917,7 @@ const About = () => {
             {values.map((value, index) => (
               <motion.div
                 key={index}
+<<<<<<< HEAD
                 className="text-center p-6 rounded-lg bg-gradient-to-r from-primary-50 to-primary-100 hover:shadow-lg transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -879,6 +933,17 @@ const About = () => {
                 >
                   <value.icon className="h-8 w-8 text-white" />
                 </motion.div>
+=======
+                className="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full mb-4">
+                  <value.icon className="h-8 w-8 text-white" />
+                </div>
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
               </motion.div>
@@ -904,6 +969,7 @@ const About = () => {
           </motion.div>
 
           <div className="relative">
+<<<<<<< HEAD
             <motion.div
               className="absolute left-1/2 transform -translate-x-px w-0.5 bg-gradient-to-b from-primary-500 to-primary-600 hidden sm:hidden md:block"
               initial={{ height: 0 }}
@@ -911,10 +977,14 @@ const About = () => {
               transition={{ duration: 1.5, ease: 'easeOut' }}
               viewport={{ once: true }}
             />
+=======
+            <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-primary-500 to-primary-600"></div>
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
             
             {timeline.map((item, index) => (
               <motion.div
                 key={index}
+<<<<<<< HEAD
                 className={`relative flex items-center ${index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'} mb-12 flex-col md:flex-row`}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -938,6 +1008,22 @@ const About = () => {
                     <p className="text-gray-600 text-center md:text-inherit">{item.description}</p>
                   </motion.div>
                 </div>
+=======
+                className={`relative flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'} mb-12`}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8'}`}>
+                  <div className="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 className="text-2xl font-bold text-primary-600 mb-2">{item.year}</h3>
+                    <h4 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h4>
+                    <p className="text-gray-600">{item.description}</p>
+                  </div>
+                </div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-500 rounded-full border-4 border-white shadow"></div>
+>>>>>>> 71d059c26bce3123d9620e9d947d421e4f051f5b
               </motion.div>
             ))}
           </div>
